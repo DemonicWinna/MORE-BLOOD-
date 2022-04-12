@@ -1,0 +1,101 @@
+{
+	id Oct.Debris.Types.Blood
+	type DebrisType
+	inherit Oct.Debris.Generic
+	
+	name = Blood
+	color = color(#830000)
+	offset = 0
+}
+{
+	id Oct.Debris.Emitters.Blood
+	type BlobDebrisEmitterType
+	inherit Oct.Debris.Emitters.Base
+	
+	name = Blood
+	tickPerSecondStart = 0
+	tickPerSecondEnd = 0
+	lifetime = 0
+	burstMin = 1
+	burstMax = 1
+	debrisType = Blood
+	volumeMin = 1
+	volumeMax = 4
+	directionMin = vector(-.5, 50, -1)
+	directionMax = vector(.5, 100, -1)
+    range = 1.75
+}
+{
+	id Oct.Debris.Emitters.LargeBlood
+	type BlobDebrisEmitterType
+	inherit Oct.Debris.Emitters.Base
+	
+	name = LargeBlood
+	tickPerSecondStart = 0
+	tickPerSecondEnd = 0
+	lifetime = 0
+	burstMin = 1
+	burstMax = 1
+	debrisType = Blood
+	volumeMin = 2
+	volumeMax = 8
+    range = 1.5
+	directionMin = vector(-.5, 50, -1)
+	directionMax = vector(.5, 100, -1)
+}
+{
+	id Oct.Debris.Emitters.SmallBloodFountain
+	type BlobDebrisEmitterType
+	inherit Oct.Debris.Emitters.Base
+	name = SmallBloodFountain
+	tickPerSecondStart = 10
+	tickPerSecondEnd = 1
+	lifetime = 3
+	randomRotation = true
+	debrisType = Blood
+	volumeMin = .5
+	volumeMax = 2
+	airTimeMin = .75
+	airTimeMax = 1
+    range = .375
+	directionMin = vector(-.5, 50, -1)
+	directionMax = vector(.5, 100, -1)
+}
+{
+	id Oct.Debris.Emitters.BloodFountain
+	type BlobDebrisEmitterType
+	inherit Oct.Debris.Emitters.Base
+	
+	name = BloodFountain
+	tickPerSecondStart = 10
+	tickPerSecondEnd = 1
+	lifetime = 5
+	randomRotation = true
+	debrisType = Blood
+	volumeMin = 1
+	volumeMax = 4
+	airTimeMin = .75
+	airTimeMax = 1
+    range = 3.75
+	directionMin = vector(-.5, 50, -1)
+	directionMax = vector(.5, 100, -1)
+}
+{
+	id Oct.Debris.Emitters.LargeBloodFountain
+	type BlobDebrisEmitterType
+	inherit Oct.Debris.Emitters.Base
+	
+	name = LargeBloodFountain
+	tickPerSecondStart = 20
+	tickPerSecondEnd = 1
+	lifetime = 5
+	randomRotation = true
+	debrisType = Blood
+	volumeMin = .5
+	volumeMax = 16
+	airTimeMin = 1
+	airTimeMax = 1.5
+    range = 4.5
+	directionMin = vector(-.5, 50, -1)
+	directionMax = vector(.5, 100, -1)
+}
